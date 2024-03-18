@@ -1,0 +1,84 @@
+﻿@model Lucir
+
+<style>
+.card{
+  width: 400px;
+/*   text-align: center; */
+  border: 3px solid green;
+  padding: 100px;
+  position: absolute;
+  left: 37%;
+  top: 5%;
+ 
+}
+.card-header{
+ font-family: "Hevetica", Times, serif;
+} 
+.centero{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%
+}
+#lxd{
+    position:absolute;
+    left: 50%;
+}
+#hiddenDiv{
+    position: center;
+    left: 20%;
+    margin-right: auto;
+    height: 50%;width: 30%;
+    padding: 20px;
+}
+
+
+</style>
+
+<div style="display=none;" id="hiddenDiv" class="toast show" role="alert" aria-live="assertive" aria-atomic="true" bis_skin_checked="1">
+  <div class="toast-header" bis_skin_checked="1">
+    <strong class="me-auto">Reminders:</strong> 
+    <button type="button" class="btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div asp-validation-summary="All" class="toast-body" bis_skin_checked="1">
+      Input the correct credentials
+  </div>
+</div>
+
+@*     <div asp-validation-summary="All" class="text-danger"></div> *@
+
+<div class="card border-light mb-3" style="max-width: 40rem; max-height: 35rem;" bis_skin_checked="1">
+
+      <img src="~/luciruniv.png" alt="Placeholder Image" class="centero">
+
+  <div class="card-body" bis_skin_checked="1">
+    <form asp-controller="Lucir" asp-action="Index" method ="post">
+
+    <label asp-for="Un"></label>
+    <input asp-for="Un" class="form-control" />
+    <br />
+    <label asp-for="Pw"></label>
+    <input type="password" asp-for="Pw" class="form-control"  />
+    <br />
+    <button type="submit" class="btn btn-outline-success" id="lxd">
+        Log In
+    </button>
+
+</form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

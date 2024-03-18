@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LucirWeb_MVC.props" />
+</Project>

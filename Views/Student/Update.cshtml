@@ -1,0 +1,40 @@
+﻿@model Student
+
+<style>
+    .card{
+  width: 400px;
+/*   text-align: center; */
+  border: 3px solid green;
+  position: absolute;
+  left: 40%;
+  top: 5%;
+ 
+}
+</style>
+
+<div class="card border-light mb-3" style="max-width: 20rem;" bis_skin_checked="1">
+  <div class="card-header" bis_skin_checked="1">Update Student</div>
+  <div class="card-body" bis_skin_checked="1">
+	  <form asp-controller="Student" asp-action="Update" method="post">
+
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" name="OldSid" value = "@Model.StudentID" />
+    <label asp-for="StudentID"></label>
+    <input asp-for="StudentID" readonly class="form-control me-sm-2" />
+    <label asp-for="Lastname"></label>
+    <input asp-for="Lastname" class="form-control me-sm-2" />
+    <label asp-for="Firstname"></label>
+    <input asp-for="Firstname" class="form-control me-sm-2" />
+    <br />
+    <a asp-controller="Student" asp-action="Index" class="btn btn-secondary">
+        Back
+    </a>
+    <button type="submit" class="btn btn-primary">
+        Update Student
+    </button>
+</form>
+  </div>
+</div>
+
+
+

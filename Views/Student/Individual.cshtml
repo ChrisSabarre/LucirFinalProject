@@ -1,0 +1,53 @@
+﻿@model Student
+
+@* <form asp-controller="Student" asp-action="SearchResult" class="card d-flex">
+    <img src="~/luciruniv.png" alt="Placeholder Image" class="centero">
+        <input asp-for="Name" class="form-control me-sm-2" placeholder="Search">
+        <button class=" XDE btn btn-secondary my-2 my-sm-0" type="submit" >Search</button>
+            <a asp-controller="Student" asp-action="Index" class="btn btn-secondary">
+        Back
+    </a>
+</form> *@
+
+<div class="card border-light mb-3" style="max-width: 40rem; max-height: 35rem;" bis_skin_checked="1">
+
+
+  <div class="card-body" bis_skin_checked="1">
+    <form asp-controller="Student" asp-action="SearchResult" method ="post">
+
+    <img src="~/luciruniv.png" alt="Placeholder Image" class="centero">
+        <input asp-for="Name" class="form-control me-sm-2" placeholder="Search">
+        <br>
+                    <a asp-controller="Student" asp-action="Index" class="btn btn-secondary">
+        Back
+    </a>
+        <button class=" XDE btn btn-secondary my-2 my-sm-0" type="submit" style="display: inline-block;" >Search</button>
+
+</form>
+  </div>
+</div>
+
+
+
+	<style>
+        .card{
+            display: inline-block;
+  width: 400px;
+/*   text-align: center; */
+  padding: 20px;
+  position: absolute;
+  left: 37%;
+  top: 5%;
+ 
+}
+.centero{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%
+}
+.XDE{
+    top: 10%;
+}
+    </style>
